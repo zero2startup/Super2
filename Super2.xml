@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_repeat" id="1" inline="true" x="60" y="166">
+  <block type="controls_repeat" id="1" inline="true" x="-37" y="181">
     <value name="TIMES">
       <block type="math_number" id="2">
         <field name="NUM">10000</field>
@@ -8,57 +8,31 @@
     <statement name="DO">
       <block type="oled_cleardisplay" id="3">
         <next>
-          <block type="controls_if" id="587" inline="false">
-            <mutation else="1"></mutation>
-            <value name="IF0">
-              <block type="logic_compare" id="594" inline="true">
-                <field name="OP">EQ</field>
-                <value name="A">
-                  <block type="sensor_spectrometer" id="544">
+          <block type="oled_setcursor" id="4" inline="true">
+            <value name="STARTX">
+              <block type="math_number" id="5">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <value name="STARTY">
+              <block type="math_number" id="6">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <next>
+              <block type="oled_drawnumber" id="7" inline="true">
+                <value name="NUMBER">
+                  <block type="sensor_spectrometer" id="8">
                     <field name="LIGHT">GREEN</field>
                   </block>
                 </value>
-                <value name="B">
-                  <block type="math_number" id="601">
-                    <field name="NUM">100</field>
-                  </block>
-                </value>
-              </block>
-            </value>
-            <statement name="DO0">
-              <block type="movement_stop" id="555"></block>
-            </statement>
-            <statement name="ELSE">
-              <block type="movement_forward" id="537"></block>
-            </statement>
-            <next>
-              <block type="oled_setcursor" id="4" inline="true">
-                <value name="STARTX">
-                  <block type="math_number" id="5">
-                    <field name="NUM">0</field>
-                  </block>
-                </value>
-                <value name="STARTY">
-                  <block type="math_number" id="6">
-                    <field name="NUM">0</field>
-                  </block>
-                </value>
                 <next>
-                  <block type="oled_drawnumber" id="7" inline="true">
-                    <value name="NUMBER">
-                      <block type="sensor_spectrometer" id="8">
-                        <field name="LIGHT">GREEN</field>
+                  <block type="robot_delay" id="18" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="19">
+                        <field name="NUM">100</field>
                       </block>
                     </value>
-                    <next>
-                      <block type="robot_delay" id="18" inline="true">
-                        <value name="DELAY">
-                          <block type="math_number" id="19">
-                            <field name="NUM">100</field>
-                          </block>
-                        </value>
-                      </block>
-                    </next>
                   </block>
                 </next>
               </block>
@@ -68,4 +42,5 @@
       </block>
     </statement>
   </block>
+  <block type="controls_if" id="617" inline="false" x="-307" y="248"></block>
 </xml>
