@@ -1,31 +1,80 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_repeat" id="14" inline="true" x="266" y="150">
+  <block type="controls_repeat" id="1" inline="true" x="266" y="150">
     <value name="TIMES">
-      <block type="math_number" id="21">
+      <block type="math_number" id="2">
         <field name="NUM">10000</field>
       </block>
     </value>
     <statement name="DO">
-      <block type="oled_cleardisplay" id="42">
+      <block type="oled_cleardisplay" id="3">
         <next>
-          <block type="oled_setcursor" id="51" inline="true">
+          <block type="oled_setcursor" id="4" inline="true">
             <value name="STARTX">
-              <block type="math_number" id="58">
+              <block type="math_number" id="5">
                 <field name="NUM">0</field>
               </block>
             </value>
             <value name="STARTY">
-              <block type="math_number" id="73">
+              <block type="math_number" id="6">
                 <field name="NUM">0</field>
               </block>
             </value>
             <next>
-              <block type="oled_drawnumber" id="85" inline="true">
+              <block type="oled_drawnumber" id="7" inline="true">
                 <value name="NUMBER">
-                  <block type="sensor_spectrometer" id="92">
-                    <field name="LIGHT">GREEN</field>
+                  <block type="sensor_spectrometer" id="8">
+                    <field name="LIGHT">BLUE</field>
                   </block>
                 </value>
+                <next>
+                  <block type="oled_drawnumber" id="17" inline="true">
+                    <value name="NUMBER">
+                      <block type="sensor_spectrometer" id="57">
+                        <field name="LIGHT">GREEN</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="oled_drawnumber" id="32" inline="true">
+                        <value name="NUMBER">
+                          <block type="sensor_spectrometer" id="64">
+                            <field name="LIGHT">YELLOW</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="oled_drawnumber" id="41" inline="true">
+                            <value name="NUMBER">
+                              <block type="sensor_spectrometer" id="79">
+                                <field name="LIGHT">IR880</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="oled_drawnumber" id="50" inline="true">
+                                <value name="NUMBER">
+                                  <block type="sensor_spectrometer" id="94">
+                                    <field name="LIGHT">IR940</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="movement_forward" id="112">
+                                    <next>
+                                      <block type="robot_delay" id="102" inline="true">
+                                        <value name="DELAY">
+                                          <block type="math_number" id="119">
+                                            <field name="NUM">100</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
               </block>
             </next>
           </block>
