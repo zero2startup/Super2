@@ -41,5 +41,11 @@
         </next>
       </block>
     </statement>
+    <next>
+      <block type="movement_forward" id="128"></block>
+    </next>
+  </block>
+  <block type="sensor_spectrometer" id="135" x="358" y="415">
+    <field name="LIGHT">GREEN</field>
   </block>
 </xml>
