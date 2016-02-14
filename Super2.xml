@@ -33,6 +33,9 @@
                         <field name="NUM">100</field>
                       </block>
                     </value>
+                    <next>
+                      <block type="movement_forward" id="187"></block>
+                    </next>
                   </block>
                 </next>
               </block>
@@ -41,5 +44,8 @@
         </next>
       </block>
     </statement>
+    <next>
+      <block type="controls_if" id="337" inline="false"></block>
+    </next>
   </block>
 </xml>
