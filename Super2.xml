@@ -27,39 +27,39 @@
                   </block>
                 </value>
                 <next>
-                  <block type="oled_drawnumber" id="17" inline="true">
+                  <block type="oled_drawnumber" id="9" inline="true">
                     <value name="NUMBER">
-                      <block type="sensor_spectrometer" id="57">
+                      <block type="sensor_spectrometer" id="10">
                         <field name="LIGHT">GREEN</field>
                       </block>
                     </value>
                     <next>
-                      <block type="oled_drawnumber" id="32" inline="true">
+                      <block type="oled_drawnumber" id="11" inline="true">
                         <value name="NUMBER">
-                          <block type="sensor_spectrometer" id="64">
+                          <block type="sensor_spectrometer" id="12">
                             <field name="LIGHT">YELLOW</field>
                           </block>
                         </value>
                         <next>
-                          <block type="oled_drawnumber" id="41" inline="true">
+                          <block type="oled_drawnumber" id="13" inline="true">
                             <value name="NUMBER">
-                              <block type="sensor_spectrometer" id="79">
+                              <block type="sensor_spectrometer" id="14">
                                 <field name="LIGHT">IR880</field>
                               </block>
                             </value>
                             <next>
-                              <block type="oled_drawnumber" id="50" inline="true">
+                              <block type="oled_drawnumber" id="15" inline="true">
                                 <value name="NUMBER">
-                                  <block type="sensor_spectrometer" id="94">
+                                  <block type="sensor_spectrometer" id="16">
                                     <field name="LIGHT">IR940</field>
                                   </block>
                                 </value>
                                 <next>
-                                  <block type="movement_forward" id="112">
+                                  <block type="movement_forward" id="17">
                                     <next>
-                                      <block type="robot_delay" id="102" inline="true">
+                                      <block type="robot_delay" id="18" inline="true">
                                         <value name="DELAY">
-                                          <block type="math_number" id="119">
+                                          <block type="math_number" id="19">
                                             <field name="NUM">100</field>
                                           </block>
                                         </value>
