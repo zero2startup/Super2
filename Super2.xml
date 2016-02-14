@@ -29,12 +29,24 @@
                 <next>
                   <block type="movement_forward" id="17">
                     <next>
-                      <block type="robot_delay" id="18" inline="true">
-                        <value name="DELAY">
-                          <block type="math_number" id="19">
-                            <field name="NUM">100</field>
+                      <block type="controls_if" id="57" inline="false">
+                        <value name="IF0">
+                          <block type="sensor_spectrometer" id="64">
+                            <field name="LIGHT">GREEN</field>
                           </block>
                         </value>
+                        <statement name="DO0">
+                          <block type="movement_stop" id="29"></block>
+                        </statement>
+                        <next>
+                          <block type="robot_delay" id="18" inline="true">
+                            <value name="DELAY">
+                              <block type="math_number" id="19">
+                                <field name="NUM">100</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
                       </block>
                     </next>
                   </block>
