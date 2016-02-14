@@ -45,7 +45,16 @@
       </block>
     </statement>
     <next>
-      <block type="controls_if" id="337" inline="false"></block>
+      <block type="controls_if" id="337" inline="false">
+        <value name="IF0">
+          <block type="sensor_spectrometer" id="469">
+            <field name="LIGHT">GREEN</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="movement_stop" id="361"></block>
+        </statement>
+      </block>
     </next>
   </block>
 </xml>
