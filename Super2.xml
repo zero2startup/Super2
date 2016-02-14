@@ -34,29 +34,29 @@
                       </block>
                     </value>
                     <next>
-                      <block type="movement_forward" id="187">
-                        <next>
-                          <block type="controls_if" id="337" inline="false">
-                            <value name="IF0">
-                              <block type="logic_compare" id="512" inline="true">
-                                <field name="OP">EQ</field>
-                                <value name="A">
-                                  <block type="sensor_spectrometer" id="469">
-                                    <field name="LIGHT">GREEN</field>
-                                  </block>
-                                </value>
-                                <value name="B">
-                                  <block type="math_number" id="520">
-                                    <field name="NUM">100</field>
-                                  </block>
-                                </value>
+                      <block type="controls_if" id="337" inline="false">
+                        <mutation else="1"></mutation>
+                        <value name="IF0">
+                          <block type="logic_compare" id="512" inline="true">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block type="sensor_spectrometer" id="469">
+                                <field name="LIGHT">GREEN</field>
                               </block>
                             </value>
-                            <statement name="DO0">
-                              <block type="movement_stop" id="361"></block>
-                            </statement>
+                            <value name="B">
+                              <block type="math_number" id="520">
+                                <field name="NUM">100</field>
+                              </block>
+                            </value>
                           </block>
-                        </next>
+                        </value>
+                        <statement name="DO0">
+                          <block type="movement_stop" id="361"></block>
+                        </statement>
+                        <statement name="ELSE">
+                          <block type="movement_forward" id="187"></block>
+                        </statement>
                       </block>
                     </next>
                   </block>
